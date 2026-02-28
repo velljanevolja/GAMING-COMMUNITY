@@ -20,17 +20,29 @@ body{
 
 /* HERO */
 .hero{
+    position:relative;
     width:100%;
-    height:75vh;
     background:black;
-    overflow:hidden;
+    text-align:center;
 }
 
 .hero img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    max-width:1800px;
+    height:auto;
     display:block;
+    margin:auto;
+}
+
+.hero-title{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:60px;
+    font-weight:bold;
+    color:#00aaff;
+    text-shadow:0 0 20px #00aaff;
 }
 
 /* SHOP */
@@ -42,6 +54,7 @@ main{
 h2{
     margin-bottom:40px;
     letter-spacing:2px;
+    font-size:32px;
 }
 
 .products{
@@ -56,8 +69,8 @@ h2{
     padding:25px;
     border-radius:15px;
     width:260px;
-    transition:0.3s;
     border:1px solid #2a2a2a;
+    transition:0.3s;
 }
 
 .card:hover{
@@ -76,17 +89,25 @@ h2{
     margin-bottom:15px;
 }
 
-button{
-    padding:10px 20px;
+.button-group{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+button, .btn-link{
+    padding:10px;
     background:#00aaff;
     border:none;
     border-radius:8px;
     color:white;
     cursor:pointer;
     font-weight:bold;
+    text-decoration:none;
+    display:block;
 }
 
-button:hover{
+button:hover, .btn-link:hover{
     background:#0088cc;
 }
 
@@ -105,37 +126,66 @@ footer{
 
 <section class="hero">
     <img src="hero.jpg.png" alt="Gaming Banner">
+    <div class="hero-title">Gamming Community</div>
 </section>
 
 <main>
-    <h2>PONUDA</h2>
+    <h2>Buy</h2>
 
     <div class="products">
         <div class="card">
             <h3>APEX LEGENDS</h3>
             <div class="price">25 €</div>
-            <button>Kupi</button>
+            <div class="button-group">
+                <a class="btn-link" href="https://wa.me/385977716620" target="_blank">
+                    Kontakt: WhatsApp (+385977716620)
+                </a>
+                <a class="btn-link" href="#" target="_blank">
+                    Kartična Kupnja
+                </a>
+                <a class="btn-link" href="https://www.paypal.com" target="_blank">
+                    PayPal Kupnja
+                </a>
+            </div>
         </div>
 
         <div class="card">
             <h3>CALL OF DUTY</h3>
             <div class="price">25 €</div>
-            <button>Kupi</button>
+            <div class="button-group">
+                <a class="btn-link" href="https://wa.me/385977716620" target="_blank">
+                    Kontakt: WhatsApp (+385977716620)
+                </a>
+                <a class="btn-link" href="#">
+                    Kartična Kupnja
+                </a>
+                <a class="btn-link" href="https://www.paypal.com" target="_blank">
+                    PayPal Kupnja
+                </a>
+            </div>
         </div>
 
         <div class="card">
             <h3>FORTNITE</h3>
             <div class="price">25 €</div>
-            <button>Kupi</button>
+            <div class="button-group">
+                <a class="btn-link" href="https://wa.me/385977716620" target="_blank">
+                    Kontakt: WhatsApp (+385977716620)
+                </a>
+                <a class="btn-link" href="#">
+                    Kartična Kupnja
+                </a>
+                <a class="btn-link" href="https://www.paypal.com" target="_blank">
+                    PayPal Kupnja
+                </a>
+            </div>
         </div>
     </div>
 </main>
 
 <footer>
-    © 2026 Gaming Shop
+    © 2026 Gaming Shop ~ Vellja_Nevolja
 </footer>
 
 </body>
 </html>
-
-
