@@ -1,90 +1,150 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAMING COMMUNITY</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GAMING COMMUNITY - Shop</title>
+<style>
+    /* Reset i osnovni stilovi */
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Arial', sans-serif; background-color: #0a0a0a; color: #fff; }
+
+    /* Header */
     header {
-      background: linear-gradient(135deg,#22c55e,#2563eb);
-      padding: 30px;
-      text-align: center;
+        background: linear-gradient(90deg, #1a1a1a, #111);
+        padding: 30px 20px;
+        text-align: center;
+        border-bottom: 3px solid #4caf50;
     }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-    .games { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
-    .game { background:#020617; padding:10px 16px; border-radius:20px; font-weight:bold; }
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:25px; }
-    .card { background:#020617; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.4); }
-    .card img { width:100%; height:200px; object-fit:cover; }
-    .card-content { padding:18px; }
-    .price { color:#22c55e; font-size:1.2rem; font-weight:bold; margin-bottom:12px; }
-    .btn { display:inline-block; padding:10px 14px; margin:4px 2px; background:#7c3aed; color:white; text-decoration:none; border-radius:10px; font-weight:bold; font-size:0.9rem; }
-    .whatsapp { background:#22c55e; }
-    .pay { background:#2563eb; }
-    footer { margin-top:50px; padding:20px; text-align:center; background:#020617; opacity:0.9; }
-  </style>
+    header h1 { font-size: 3rem; letter-spacing: 2px; }
+
+    /* Navbar */
+    nav { background: #111; text-align: center; padding: 15px 0; }
+    nav a {
+        color: #fff;
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover { color: #4caf50; }
+
+    /* Main shop grid */
+    main { padding: 50px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+
+    /* Kartice proizvoda */
+    .product-card {
+        background: #1a1a1a;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0,0,0,0.8);
+    }
+
+    .product-card img {
+        width: 100%;
+        display: block;
+    }
+
+    .product-content {
+        padding: 20px;
+        text-align: center;
+    }
+    .product-content h3 { font-size: 1.8rem; margin-bottom: 10px; color: #4caf50; }
+    .product-content p { font-size: 1.3rem; margin-bottom: 15px; }
+
+    /* Dugmad */
+    .buttons a {
+        display: inline-block;
+        margin: 5px 10px;
+        padding: 12px 22px;
+        background: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 8px;
+        transition: background 0.3s, transform 0.3s;
+    }
+    .buttons a:hover {
+        background: #45a046;
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        border-top: 3px solid #4caf50;
+        margin-top: 50px;
+        font-size: 0.95rem;
+    }
+
+    /* Responsivnost */
+    @media(max-width: 500px) {
+        header h1 { font-size: 2rem; }
+        nav a { margin: 0 10px; }
+    }
+</style>
 </head>
 <body>
 
 <header>
-  <h1>🎮 GAMING COMMUNITY</h1>
-  <p>Apex Legends • Fortnite • Call of Duty</p>
+    <h1>GAMING COMMUNITY</h1>
 </header>
 
-<div class="container">
-  <div class="games">
-    <div class="game">Apex Legends</div>
-    <div class="game">Fortnite</div>
-    <div class="game">Call of Duty</div>
-  </div>
+<nav>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Kontakt</a>
+</nav>
 
-  <div class="products">
-
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300" alt="Apex Legends">
-      <div class="card-content">
-        <h3>Apex Legends – Rare Skin</h3>
-        <div class="price">25 €</div>
-        <a href="https://wa.me/38760000000" class="btn whatsapp">WhatsApp</a>
-        <a href="https://paypal.me/tvojeime" class="btn pay">PayPal</a>
-        <a href="#" class="btn pay">Kartica</a>
-      </div>
+<main id="shop">
+    <!-- APEX LEGENDS -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=APEX+LEGENDS" alt="APEX LEGENDS">
+        <div class="product-content">
+            <h3>APEX LEGENDS</h3>
+            <p>25 €</p>
+            <div class="buttons">
+                <a href="https://wa.me">WhatsApp</a>
+                <a href="https://paypal.me">PayPal</a>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300" alt="Fortnite">
-      <div class="card-content">
-        <h3>Fortnite – Skin Bundle</h3>
-        <div class="price">20 €</div>
-        <a href="https://wa.me/38760000000" class="btn whatsapp">WhatsApp</a>
-        <a href="https://paypal.me/tvojeime" class="btn pay">PayPal</a>
-        <a href="#" class="btn pay">Kartica</a>
-      </div>
+    <!-- FORTNITE -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=FORTNITE" alt="FORTNITE">
+        <div class="product-content">
+            <h3>FORTNITE</h3>
+            <p>25 €</p>
+            <div class="buttons">
+                <a href="https://wa.me">WhatsApp</a>
+                <a href="https://paypal.me">PayPal</a>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-      <img src="https://via.placeholder.com/400x300" alt="Call of Duty">
-      <div class="card-content">
-        <h3>Call of Duty – Account</h3>
-        <div class="price">60 €</div>
-        <a href="https://wa.me/38760000000" class="btn whatsapp">WhatsApp</a>
-        <a href="https://paypal.me/tvojeime" class="btn pay">PayPal</a>
-        <a href="#" class="btn pay">Kartica</a>
-      </div>
+    <!-- WARZONE -->
+    <div class="product-card">
+        <img src="https://via.placeholder.com/400x220?text=WARZONE" alt="WARZONE">
+        <div class="product-content">
+            <h3>WARZONE</h3>
+            <p>25 €</p>
+            <div class="buttons">
+                <a href="https://wa.me">WhatsApp</a>
+                <a href="https://paypal.me">PayPal</a>
+            </div>
+        </div>
     </div>
-
-  </div>
-</div>
+</main>
 
 <footer>
-  <p>© 2026 – GAMING COMMUNITY | Sigurna kupovina</p>
+    &copy; 2026 GAMING COMMUNITY | Sigurna kupovina
 </footer>
 
 </body>
