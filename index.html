@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gamming Community</title>
+<title>Gaming Community</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@ body{
     overflow-x:hidden;
 }
 
-/* ===== HERO ===== */
 .hero{
     position:relative;
     text-align:center;
@@ -36,7 +35,6 @@ body{
     filter:contrast(1.15) saturate(1.2);
 }
 
-/* DARK CINEMATIC OVERLAY */
 .hero::after{
     content:"";
     position:absolute;
@@ -44,33 +42,6 @@ body{
     background:radial-gradient(circle at center,rgba(0,0,0,0.2),rgba(0,0,0,0.85));
 }
 
-/* LIGHTNING EFFECT */
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:-40%;
-    background:
-    repeating-linear-gradient(120deg,
-        rgba(0,255,255,0.15) 0px,
-        rgba(0,255,255,0.15) 2px,
-        transparent 3px,
-        transparent 40px),
-    repeating-linear-gradient(-120deg,
-        rgba(123,44,255,0.12) 0px,
-        rgba(123,44,255,0.12) 2px,
-        transparent 3px,
-        transparent 40px);
-    animation:storm 2s infinite;
-    opacity:0.15;
-    mix-blend-mode:screen;
-}
-
-@keyframes storm{
-    0%,100%{opacity:0.05;}
-    50%{opacity:0.4;}
-}
-
-/* HERO TEXT */
 .hero-content{
     position:absolute;
     top:45%;
@@ -84,16 +55,9 @@ body{
     font-size:clamp(28px,3vw,50px);
     letter-spacing:5px;
     text-transform:uppercase;
-    animation:glitch 1.5s infinite;
+    text-shadow:0 0 20px #00e5ff;
 }
 
-@keyframes glitch{
-    0%{text-shadow:2px 2px #00e5ff,-2px -2px #ff2d7a;}
-    50%{text-shadow:-2px -2px #7b2cff,2px 2px #00e5ff;}
-    100%{text-shadow:2px -2px #ff2d7a,-2px 2px #7b2cff;}
-}
-
-/* ENTER BUTTON */
 .scroll-btn{
     display:inline-block;
     margin-top:25px;
@@ -111,7 +75,6 @@ body{
     transform:scale(1.1);
 }
 
-/* TOP BAR */
 .topbar{
     text-align:center;
     padding:14px;
@@ -120,7 +83,6 @@ body{
     font-weight:bold;
 }
 
-/* ===== MAIN ===== */
 main{
     padding:80px 20px;
     text-align:center;
@@ -133,7 +95,6 @@ h2{
     letter-spacing:5px;
 }
 
-/* BUNDLE CARD */
 .card{
     max-width:700px;
     margin:0 auto;
@@ -142,23 +103,6 @@ h2{
     border-radius:25px;
     border:1px solid rgba(255,255,255,0.1);
     box-shadow:0 0 60px rgba(0,0,0,0.7);
-    position:relative;
-}
-
-/* Animated glow border */
-.card::before{
-    content:"";
-    position:absolute;
-    inset:-2px;
-    border-radius:25px;
-    background:conic-gradient(#00e5ff,#7b2cff,#ff2d7a,#00e5ff);
-    animation:spin 4s linear infinite;
-    z-index:-1;
-    filter:blur(15px);
-}
-
-@keyframes spin{
-    to{transform:rotate(360deg);}
 }
 
 .card h3{
@@ -172,7 +116,6 @@ h2{
     color:#ff2c2c;
     font-weight:bold;
     margin-bottom:30px;
-    text-shadow:0 0 20px rgba(255,0,0,0.6);
 }
 
 .btns{
@@ -191,24 +134,24 @@ h2{
 }
 
 .btn-wa{ background:#25D366; }
-.btn-card{ background:linear-gradient(90deg,#00e5ff,#7b2cff); }
-.btn-paypal{ background:linear-gradient(90deg,#003087,#009cde); }
+
+.btn-card{
+    background:linear-gradient(90deg,#00e5ff,#7b2cff);
+    box-shadow:0 0 20px rgba(0,229,255,0.7);
+}
 
 .btn:hover{
     transform:scale(1.05);
 }
 
-/* STRIP */
 .strip{
     margin-top:50px;
     padding:20px;
     background:rgba(255,255,255,0.05);
     border-radius:20px;
     font-size:16px;
-    letter-spacing:1px;
 }
 
-/* FOOTER */
 footer{
     margin-top:50px;
     padding:25px;
@@ -224,46 +167,42 @@ footer{
 <section class="hero">
     <img src="hero.jpg.png" alt="Gaming Banner">
     <div class="hero-content">
-        <div class="hero-title">Gamming Community</div>
+        <div class="hero-title">Gaming Community</div>
         <a href="#buy" class="scroll-btn">ENTER STORE</a>
     </div>
 </section>
 
 <div class="topbar">
-    INSTANT DELIVERY • 24/7 SUPPORT • ONE BUNDLE
+    INSTANT DELIVERY • 24/7 SUPPORT • ONE VIP BUNDLE
 </div>
 
 <main id="buy">
 
-<h2>Buy</h2>
+<h2>Buy VIP Access</h2>
 
 <div class="card">
-    <h3>APEX LEGENDS • CALL OF DUTY • FORTNITE</h3>
-    <div class="price">30 €</div>
+    <h3>APEX LEGENDS • CALL OF DUTY • FORTNITE • BATTLEFIELD</h3>
+    <div class="price">30 € / Month</div>
 
     <div class="btns">
         <a class="btn btn-wa" href="https://wa.me/385977716620" target="_blank">
-            Contact: WhatsApp (+385977716620)
+            Contact on WhatsApp
         </a>
 
-        <a class="btn btn-card" href="#">
-            Card Purchase
-        </a>
-
-        <a class="btn btn-paypal" href="https://www.paypal.com" target="_blank">
-            PayPal Purchase
+        <a class="btn btn-card" href="https://whop.com/gaming-community-afaa/vip-access-15-be6e" target="_blank">
+            🔥 BUY VIP ACCESS NOW 🔥
         </a>
     </div>
 </div>
 
 <div class="strip">
-    💰 <b>PRICE: 30 € for all</b> • ⚡ Instant support • 🔒 Secure payment
+    💰 Full access to all games • ⚡ Instant delivery • 🔒 Secure checkout
 </div>
 
 </main>
 
 <footer>
-    © 2026 Gaming Shop ~ Vellja_Nevolja
+    © 2026 Gaming Community
 </footer>
 
 </body>
